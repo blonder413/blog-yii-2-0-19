@@ -84,7 +84,7 @@ class SiteController extends Controller
         $query = Article::find();
 
         $pagination = new Pagination([
-            'defaultPageSize'   => 20,
+            'defaultPageSize'   => 15,
             'totalCount'        => $query->count(),
         ]);
 
@@ -559,6 +559,10 @@ class SiteController extends Controller
         $categories     = Category::find()->orderBy('category asc')->all();
         $course         = Course::find()->where("slug = :slug", [":slug" => $slug])->one();
 
+        if (!$course) {
+            throw new NotFoundHttpException();
+        }
+        
         $query          = Article::find()->where("course_id = :course", [":course" => $course->id]);
         $pagination     = new Pagination([
             'defaultPageSize'   => 15,

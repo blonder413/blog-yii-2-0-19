@@ -44,6 +44,10 @@ $this->params['most_visited'] = $most_visited;
     
     <div class="row">
         
+        <?php if (sizeof($articles) === 0): ?>
+        <div class='alert alert-danger'>Aún no existe material para este curso.</div>
+        <?php endif; ?>
+        
         <?php foreach ($articles as $key => $value): ?>
         <article class="clear-fix">
             <div>

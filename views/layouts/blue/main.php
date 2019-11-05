@@ -121,6 +121,7 @@ AppAsset::register($this);
                                 ['label' => 'Article', 'url' => ['/article/index']],
                                 ['label' => 'Category', 'url' => ['/category/index']],
                                 ['label' => 'Comment', 'url' => ['/comment/index']],
+                                ['label' => 'Course', 'url' => ['/course/index']],
                                 ['label' => 'Streaming', 'url' => ['/streaming/index']],
                                 ['label' => 'User', 'url' => ['/user/index']],
                                 [
@@ -239,11 +240,11 @@ AppAsset::register($this);
                         ['target' => '_blank', 'title'  => 'Mi perfil en Twitter']
                     ) ?>
             
-                    <?php /* echo Html::a(
+                    <?= Html::a(
                         Html::img("@web/web/img/facebook-c.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi biografía en Facebook']),
                         '@facebook',
                         ['target' => '_blank', 'title'  => 'Mi perfil en Facebook']
-                    ) */ ?>
+                    ) ?>
 
                     <?= Html::a(
                         Html::img("@web/web/img/youtube-c.png", ['class'=>'img-thumbnail','width' => '50', 'alt' => 'Mi repositorio en Github']),
@@ -405,6 +406,15 @@ AppAsset::register($this);
                     <div class="list-group">
                         <a class="twitter-timeline"  href="https://twitter.com/blonder413" data-widget-id="245510889955008512">Tweets por el @blonder413.</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------------------------------------------------------------->
+            <div class="panel panel-primary">
+                <div class="panel-heading">Página de Facebook</div>
+                <div class="list-group">
+                    <div class="list-group">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FBlonder413-111821686918726&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=507581570091903" width="220" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 </div>
             </div>
